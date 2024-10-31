@@ -1,0 +1,15 @@
+# @package _global_
+
+defaults:
+  - override /datamodule: hf_text
+  - override /algorithm: hf_example
+  - override /algorithm/network: albert-base-v2
+  - override /trainer/callbacks: none
+
+trainer:
+  min_epochs: 1
+  max_epochs: 2
+  limit_train_batches: 2
+  limit_val_batches: 1
+  num_sanity_val_steps: 0
+  enable_checkpointing: False
